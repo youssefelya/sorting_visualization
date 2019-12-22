@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ALgo Visualizing</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="top-list">
+                <li>ALgo Visualizing</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid-main">
+        <aside class="sidebar" id="left">
+            <div class="info" id="heapInfo" style="display: none;">
+                <p>
+                    It is exclusively based on <span class="imp">binary Heap data structure</span>.
+                    It involves finding the largest and sorting it to the end of an unsorted collection.
+                </p>
+            </div>
+            <div class="info" id="bubbleInfo" style="display: none;">
+                <p>
+                    It is <span class="imp">comparison-based </span>algorithm which goes through entire 
+                    collection(iterates) and compares two elements at a time. If the elements are out-of-order, 
+                    it swaps them until the entire collection is sorted. After every iteration the highest 
+                    values settles down at the end of the collection.
+                </p>
+            </div>
+            <div class="info" id="quickInfo" style="display: none;">
+                <p>
+                    It uses<span class="imp"> Divide & Conquer</span>, and chooses a pivot point in a collection
+                    of elements. It partitions the collection around the pivot, so that elements smaller then pivot
+                    are moved before it, larger elements are moved after it. 
+                </p>
+            </div>
+            <div class="info" id="insertionInfo" style="display: none;">
+                <p>
+                    This is an comparison-based sorting algorithm. It maintains a sublist of the collection
+                    given already as "sorted sublist". It iterates through collection, one-by-one inserts elements
+                    into their correct spots in the sorted sublist.
+                </p>
+            </div>
+            <div class="info" id="mergeInfo" style="display: none;">
+                <p>
+                    It is<span class="imp"> Divide & Conquer</span> algorithm, it divides the collection into 2 halves
+                    , and merges them in sorted manner to give sorted collection -- all of this, using RECURSION.
+                    Basic logic behind mergeSort - it tends to be a lot easier to 2 smaller list, rather then one large unsorted list.
+                </p>
+            </div>
+            <ul class="algo-overview" style="display: none; transition: .5s;">
+                <li>Time Complexity     : <span id="timeComplex"></span></li>
+                <li>Space Complexity    : <span id="spaceComplex"></span></li>
+                <li>stability           : <span id="stability"></span></li>
+                <li>Internal/External   : <span id="memory"></span></li>
+                <li>Recursive           : <span id="recursive"></span></li>
+                <li>Comparsion          : <span id="swapi"></span></li>
+            </ul>
+            <button id="newArray">Generate a Random Array</button>
+            <form method="POST">
+                <label for="len">Array Length 
+                    <input type="range" class="slider" id="myRange" min="4" max="200" value="101">
+                </label>
+
+                <label for="len"> speed
+                    <input type="range" name="points" class="slider" id="myRange" min="4" max="200" value="101">
+                </label>
+            </form>
+        </aside>
+
+
+        <div id="center">
+        </div>
+
+        <aside class="sidebar" id="right">
+            <div class="sorting-list">
+                <div class="algoname">Merge Sort</div>
+                <div class="algoname">Insertion Sort</div>
+            <!--     <div class="algoname">Quick Sort</div> -->
+                <div class="algoname">Bubble Sort</div>
+                <div class="algoname">Heap Sort</div>
+            </div>
+            <button onclick="sort();" id="sort" >Start</button>
+
+            <div id="note" style="visibility: hidden;">
+                <p></p>
+            </div>
+
+        </aside>
+    </div>
+    <script src="script.js"></script>
+    <script src="./algorithms/bubbleSort.js"></script>
+    <script src="./algorithms/heapSort.js"></script>
+    <script src="./algorithms/insertionSort.js"></script>
+    <script src="./algorithms/mergeSort.js"></script>
+    <script src="./algorithms/quickSort.js"></script>
+
+</body>
+</html>
+
+
