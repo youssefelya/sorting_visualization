@@ -82,10 +82,10 @@ button#sort:disabled{
 }
 .sidebar{
     margin: 10px;
-    padding: 0px;
+    padding: 18px;
     background: rgb(27, 2, 2);
     color: azure;
-    display: flex;
+    display: inline;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -168,7 +168,11 @@ button#sort:disabled{
 #center{
     display: flex;
     align-items: flex-end;
-    padding: 10 70px;
+    align-content: center;
+    padding: 0 70px;
+    margin: 0 200px;
+    height: 310px;
+    width: 200px;
 }
 
 .disabled{

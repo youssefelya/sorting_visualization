@@ -137,7 +137,7 @@ async function sort() {
 
         // setting algo-overview values
         setOverviewInfo("O(n logn)", "In-Place", "UnStable", "Internal", "Non-Recursive", "Yup!");
-        setNote('It first builds a <span>MAX HEAP</span>, then delete maximum valued element from it and put it at the end of collection. It recursively repeat this until whole collection is sorted.')
+    //    setNote('It first builds a <span>MAX HEAP</span>, then delete maximum valued element from it and put it at the end of collection. It recursively repeat this until whole collection is sorted.')
         // @ts-ignore
         await heapSort(divArr, n, ms); // calling heapSort        
 
@@ -146,7 +146,7 @@ async function sort() {
         // setting algo-overview values
         setOverviewInfo("O(n logn)", "Out-Of-Place", "Stable", "External", "Recursive", "Yup!");
 
-        setNote('If you look closely, you will notice that at some moments it has duplicated values, becoz in merge SOrt it never swaps values instead it <span>OVERWRITES</span> them!!!');
+    //    setNote('If you look closely, you will notice that at some moments it has duplicated values, becoz in merge SOrt it never swaps values instead it <span>OVERWRITES</span> them!!!');
 
         const animations = [];
         const realArray = [];
@@ -186,7 +186,7 @@ async function sort() {
 
         // setting algo-overview values
         setOverviewInfo("O(n<sup>2</sup>)", "In-Place", "Stable", "Internal", "Non-Recursive", "Yup!");
-        setNote('If you look closely, you can see that a some moments, It has duplicated values becoz it overwrite elements.')
+    //    setNote('If you look closely, you can see that a some moments, It has duplicated values becoz it overwrite elements.')
         // @ts-ignore
         await insertionSort(divArr, n, ms);
     } else if (currentAlgo === 'quick') {
@@ -194,7 +194,7 @@ async function sort() {
         // setting algo-overview values
         setOverviewInfo("O(n logn)", "In-Place", "UnStable", "Internal", "Recursive", "Yup!");
 
-        setNote('In this, I have always picked <span>LAST</span> element as pivot.')
+     //   setNote('In this, I have always picked <span>LAST</span> element as pivot.')
         // @ts-ignore
         await qucikSort(divArr, 0, n - 1, ms);
     } else {
@@ -229,11 +229,9 @@ async function sort() {
 
 // for swapping two div's height and changing color
 async function swapi(arr, i, j, ms){
-    // @ts-ignore
-   const a1 = arr[i];
-   const a2 = arr[j];
+   let  a1 = arr[i];
+   let a2 = arr[j];
     // changing to selected colors
-
     a1.style.background = SELECTED_COLOR;
     a2.style.background = SELECTED_COLOR;
     await timer(ms);
