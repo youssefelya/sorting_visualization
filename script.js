@@ -102,7 +102,7 @@ async function sort() {
     document.getElementsByClassName('algo-overview')[0].style.display = "block";
 
     // displaying selected sort Info
-    document.getElementById(currentAlgo + "Info").style.display = "block";
+  //  document.getElementById(currentAlgo + "Info").style.display = "block";
 
     // disabling all things
     document.getElementById('sort').setAttribute("disabled", "disabled");

@@ -112,9 +112,11 @@ button#sort:disabled{
     transition: .3s;
 }
 #right .sorting-list div:hover{
+  
     color: coral;
 }
 #right .sorting-list div.selectedAlgo{
+    display: inline-block;
     color: coral;
 }
 @media screen and (max-width: 768px){
@@ -127,6 +129,7 @@ button#sort:disabled{
 }
 .slider {
     -webkit-appearance: none;
+      display: inline-block;
     appearance: none;
     width: 25%;
     height: 10px;
@@ -174,7 +177,7 @@ button#sort:disabled{
 }
 
 .info{
-    padding: 0 10px;
+    padding: 0 100px;
     font-family: monospace;
     color: #ff8115;
 }
