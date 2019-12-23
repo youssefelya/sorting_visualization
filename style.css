@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: black;
+    background: #939c80;
 }
 
 a{
@@ -11,7 +11,7 @@ a{
     font-weight: 500;
 }
 header{
-    background: #292229;
+    background: rgb(27, 2, 2);
 }
 ul.top-list{
     margin: 0;
@@ -24,20 +24,20 @@ ul.top-list li{
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
-    color: #fff115;
+    color: #ff156f;
 }
 
 .grid-main{
     display: grid;
-    height: calc(100vh - 60px);
+    height: calc(40vh - 20px);
     grid-template-columns: 1fr 3fr 1fr;
 }
 #sort{
-    visibility: hidden;
-    margin: 20px 0;
+    visibility: visible;
+    margin: 50px 10;
     padding: 17px 28px;
     border-radius: 50px;
-    border: 1px solid aqua;
+    border: 1px solid yellow;
     outline: none;
     background: transparent;
     letter-spacing: 4px;    
@@ -78,17 +78,21 @@ button#sort:disabled{
     transition: .5s;
 }
 #newArray:hover{
-    color: aqua;
+    color: red;
 }
 .sidebar{
-    margin: 0;
-    padding: 10px;
-    background: rgb(41, 41, 41);
+    margin: 10px;
+    padding: 0px;
+    background: rgb(27, 2, 2);
     color: azure;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.algoname{
+    display: inline;
+    border: 1px ;
 }
 #left{
     justify-content: flex-end;
@@ -124,8 +128,8 @@ button#sort:disabled{
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
-    height: 5px;
+    width: 25%;
+    height: 10px;
     border-radius: 30%;
     background: #91a9ff;
     outline: none;
@@ -161,7 +165,7 @@ button#sort:disabled{
 #center{
     display: flex;
     align-items: flex-end;
-    padding: 0 20px;
+    padding: 10 70px;
 }
 
 .disabled{

@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ALgo Visualizing</title>
+    <title>Algo Visualizing</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -12,30 +13,58 @@
     <header>
         <nav>
             <ul class="top-list">
-                <li>ALgo Visualizing</li>
+                <li>Algo Visualizing</li>
             </ul>
         </nav>
+
+        <aside class="sidebar" id="right">
+            <div class="sorting-list">
+                <div class="algoname">Merge Sort</div>
+                <div class="algoname">Insertion Sort</div>
+            <!--     <div class="algoname">Quick Sort</div> -->
+                <div class="algoname">Bubble Sort</div>
+                <div class="algoname">Heap Sort</div>
+            </div>
+
+            <form method="POST">
+                <label for="len">Array Length 
+                    <input type="range" class="slider" id="myRange" min="4" max="200" value="101">
+                </label>
+    
+                <label for="len"> speed
+                    <input type="range" name="points" class="slider" id="myRange" min="4" max="200" value="101">
+                </label>
+            </form>
+
+            <button onclick="sort();" id="sort" >Start</button>
+
+            <div id="note" style="visibility: hidden;">
+                <p></p>
+            </div>
+
+        </aside>
+        <button id="newArray">Generate a Random Array</button>
+      
+
     </header>
 
     <div class="grid-main">
         <aside class="sidebar" id="left">
             <div class="info" id="heapInfo" style="display: none;">
                 <p>
-                    It is exclusively based on <span class="imp">binary Heap data structure</span>.
-                    It involves finding the largest and sorting it to the end of an unsorted collection.
+                    A Heap is a special Tree-based data structure in which the tree is a complete binary tree.
+
                 </p>
             </div>
             <div class="info" id="bubbleInfo" style="display: none;">
                 <p>
-                    It is <span class="imp">comparison-based </span>algorithm which goes through entire 
-                    collection(iterates) and compares two elements at a time. If the elements are out-of-order, 
-                    it swaps them until the entire collection is sorted. After every iteration the highest 
-                    values settles down at the end of the collection.
+                    Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements
+                     if they are in wrong order.
                 </p>
             </div>
             <div class="info" id="quickInfo" style="display: none;">
                 <p>
-                    It uses<span class="imp"> Divide & Conquer</span>, and chooses a pivot point in a collection
+                    It uses  Divide & Conquer  and chooses a pivot point in a collection
                     of elements. It partitions the collection around the pivot, so that elements smaller then pivot
                     are moved before it, larger elements are moved after it. 
                 </p>
@@ -62,37 +91,14 @@
                 <li>Recursive           : <span id="recursive"></span></li>
                 <li>Comparsion          : <span id="swapi"></span></li>
             </ul>
-            <button id="newArray">Generate a Random Array</button>
-            <form method="POST">
-                <label for="len">Array Length 
-                    <input type="range" class="slider" id="myRange" min="4" max="200" value="101">
-                </label>
-
-                <label for="len"> speed
-                    <input type="range" name="points" class="slider" id="myRange" min="4" max="200" value="101">
-                </label>
-            </form>
+           
         </aside>
 
 
         <div id="center">
         </div>
 
-        <aside class="sidebar" id="right">
-            <div class="sorting-list">
-                <div class="algoname">Merge Sort</div>
-                <div class="algoname">Insertion Sort</div>
-            <!--     <div class="algoname">Quick Sort</div> -->
-                <div class="algoname">Bubble Sort</div>
-                <div class="algoname">Heap Sort</div>
-            </div>
-            <button onclick="sort();" id="sort" >Start</button>
-
-            <div id="note" style="visibility: hidden;">
-                <p></p>
-            </div>
-
-        </aside>
+      
     </div>
     <script src="script.js"></script>
     <script src="./algorithms/bubbleSort.js"></script>
