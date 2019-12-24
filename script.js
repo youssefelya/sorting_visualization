@@ -182,7 +182,7 @@ async function sort() {
 
         // setting algo-overview values
      //   setOverviewInfo("O(n<sup>2</sup>)", "In-Place", "Stable", "Internal", "Non-Recursive", "Yup!");
-    //    setNote('If you look closely, you can see that a some moments, It has duplicated values becoz it overwrite elements.')
+       setNote('Insertion sort is based on the idea that one element from the input elements is consumed in each iteration to find its correct position i.e, the position to which it belongs in a sorted array.')
         // @ts-ignore
         await insertionSort(divArr, n, ms);
     } else if (currentAlgo === 'quick') {
@@ -190,7 +190,7 @@ async function sort() {
         // setting algo-overview values
      //   setOverviewInfo("O(n logn)", "In-Place", "UnStable", "Internal", "Recursive", "Yup!");
 
-     //   setNote('In this, I have always picked <span>LAST</span> element as pivot.')
+       setNote('In this, I have always picked <span>LAST</span> element as pivot.')
         // @ts-ignore
         await qucikSort(divArr, 0, n - 1, ms);
     }else if(currentAlgo === 'radix'){
