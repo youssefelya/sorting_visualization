@@ -5,9 +5,13 @@
     
     for (let i=n-1; i>=0; i--) 
     { 
+        // @ts-ignore
         await swapi(divArr, 0, i, ms);
+        
         // this div is sorted so green
+        // @ts-ignore
         divArr[i].style.background = FINAL_COLOR;
+        
         await heapify(divArr, i, 0, ms ); 
     }
 }
@@ -26,6 +30,7 @@ async function heapify(divArr, n, i, ms){
 
     if (largest != i) 
     { 
+        // @ts-ignore
         await swapi(divArr, i, largest, ms);
         await heapify(divArr, n, largest, ms); 
     } 

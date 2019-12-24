@@ -1,99 +1,63 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Algo Visualizing</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-
+    <title>Algo Visualization</title>
 </head>
-<body>
+  <body> 
+
     <header>
-        <nav>
-            <ul class="top-list">
-                <li>Algo Visualizing</li>
-            </ul>
-        </nav>
+     
 
         <aside class="sidebar" id="right">
             <div class="sorting-list">
+
+                <button  id="newArray" type="button" class="btn btn-outline-primary"  >Generate a Random Array</button>
+
+                <div class="algoname">Radix Sort</div>
                 <div class="algoname">Merge Sort</div>
                 <div class="algoname">Insertion Sort</div>
             <!--     <div class="algoname">Quick Sort</div> -->
                 <div class="algoname">Bubble Sort</div>
                 <div class="algoname">Heap Sort</div>
+               
             </div>
 
             <form method="POST">
                 <label for="len">Array Length 
-                    <input type="range" class="slider" id="myRange" min="4" max="200" value="101">
+                    <input type="range" 
+                     class="slider" id="myRange" min="4" max="100" value="36">
                 </label>
     
                 <label for="len"> speed
-                    <input type="range" name="points" class="slider" id="myRange" min="4" max="200" value="101">
+                    <input type="range"  name="points" class="slider" id="myRange" min="4" max="200" value="101">
                 </label>
             </form>
 
-            <button onclick="sort();" id="sort" >Start</button>
+            <button style="visibility: hidden;" onclick="sort();" id="sort" type="button" class="btn btn-outline-primary" >Sort</button>
 
             <div id="note" style="visibility: hidden;">
                 <p></p>
             </div>
 
         </aside>
-        <button  id="newArray"  
-         >Generate a Random Array</button>
+    
     </header>
+     
 
+
+
+    
     <div class="grid-main">
-        <aside class="sidebar" id="left">
-            <div class="info" id="heapInfo" style="display: none;">
-                <p>
-                    A Heap is a special Tree-based data structure in which the tree is a complete binary tree.
-
-                </p>
-            </div>
-            <div class="info" id="bubbleInfo" style="display: none;">
-                <p>
-                    Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements
-                     if they are in wrong order.
-                </p>
-            </div>
-            <div class="info" id="quickInfo" style="display: none;">
-                <p>
-                    It uses  Divide & Conquer  and chooses a pivot point in a collection
-                    of elements. It partitions the collection around the pivot, so that elements smaller then pivot
-                    are moved before it, larger elements are moved after it. 
-                </p>
-            </div>
-            <div class="info" id="insertionInfo" style="display: none;">
-                <p>
-                    This is an comparison-based sorting algorithm. It maintains a sublist of the collection
-                    given already as "sorted sublist". It iterates through collection, one-by-one inserts elements
-                    into their correct spots in the sorted sublist.
-                </p>
-            </div>
-            <div class="info" id="mergeInfo" style="display: none;">
-                <p>
-                    It is<span class="imp"> Divide & Conquer</span> algorithm, it divides the collection into 2 halves
-                    , and merges them in sorted manner to give sorted collection -- all of this, using RECURSION.
-                    Basic logic behind mergeSort - it tends to be a lot easier to 2 smaller list, rather then one large unsorted list.
-                </p>
-            </div>
-            <ul class="algo-overview" style="display: none; transition: .5s;">
-                <li>Time Complexity     : <span id="timeComplex"></span></li>
-                <li>Space Complexity    : <span id="spaceComplex"></span></li>
-                <li>stability           : <span id="stability"></span></li>
-                <li>Internal/External   : <span id="memory"></span></li>
-                <li>Recursive           : <span id="recursive"></span></li>
-                <li>Comparsion          : <span id="swapi"></span></li>
-            </ul>
-           
-        </aside>
-
-
         <div id="center">
         </div>
 
@@ -105,8 +69,11 @@
     <script src="./algorithms/insertionSort.js"></script>
     <script src="./algorithms/mergeSort.js"></script>
     <script src="./algorithms/quickSort.js"></script>
+    <script src="./algorithms/radixSort.js"></script>
+
+
+
+
 
 </body>
 </html>
-
-

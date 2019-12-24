@@ -1,17 +1,19 @@
 body{
     margin: 0;
     padding: 0;
-    background: #939c80;
+    
 }
-
 a{
     text-decoration: none;
-    color: azure;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
 }
 header{
-    background: rgb(27, 2, 2);
+    background: rgb(236, 234, 234);
+    /* display: flexbox; */
+    margin: 0px ;
+     width: 1360px;
+     height: 300px;
 }
 ul.top-list{
     margin: 0;
@@ -24,52 +26,41 @@ ul.top-list li{
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
-    color: #ff156f;
+    color: #3c137e;
 }
 
 .grid-main{
-    display: grid;
-    height: calc(40vh - 20px);
-    grid-template-columns: 1fr 3fr 1fr;
+    
+    /* display: grid;
+    height: calc(20vh - 700px);
+    grid-template-columns: 1fr 3fr 1fr; */
 }
 #sort{
-    visibility: visible;
-    margin: 50px 10;
-    padding: 17px 28px;
-    border-radius: 50px;
-    border: 1px solid yellow;
-    outline: none;
-    background: transparent;
-    letter-spacing: 4px;    
-    text-transform: uppercase;
-    font-weight: bolder;    
-    color: azure;
-    text-align: left;
-    font-size: 1.1rem;
+    visibility: collapse;
+    margin-left:auto;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
-    transition: .5s;
+    margin-right:auto;
+    display:block;
+    margin-top:0%;
+    margin-bottom:0%;
 }
 button#sort:hover,
 button#sort:active,
 button#sort:focus{
-    background: aqua;
     color: black;
-    border: 2px solid #000;
-    margin: 19px 0;
-    text-shadow: 0 0 5px #292929;
-    box-shadow: inset 0 0 10px #292929;
 }
 button#sort:disabled{
     cursor: not-allowed;
     opacity: .5;
 }
 #newArray{
-    margin: 20px 0;
+    margin: 20px 90px;
+ 
     border: none;
     outline: none;
-    background: transparent;
-    color: azure;
+    /* background: azure; */
+    color: #292929;
     text-align: left;
     font-size: 1.1rem;
     font-weight: 500;
@@ -78,20 +69,81 @@ button#sort:disabled{
     transition: .5s;
 }
 #newArray:hover{
-    color: red;
+    color: black
 }
+
+/* 
+#sort{
+    visibility: collapse;
+    margin: 50px 10;
+    padding: 17px 33px;
+    border-radius: 50px;
+    border: 1px solid yellow;
+    outline: none;
+    background: transparent;
+    letter-spacing: 4px;    
+    text-transform: uppercase;
+    font-weight: bolder;    
+    color: black;
+    text-align: left;
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button#sort:hover,
+button#sort:active,
+button#sort:focus{
+    background: azure;
+    color: black;
+    border: 2px solid #000;
+    margin: 19px 0;
+    text-shadow: 0 0 5px azure;
+    box-shadow: inset 0 0 10px #292929;
+}
+button#sort:disabled{
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+#newArray{
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    background: azure;
+    color: #292929;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: .5s;
+}
+#newArray:hover{
+    color: black
+}
+*/
 .sidebar{
-    margin: 10px;
+    margin: 0px;
     padding: 18px;
-    background: rgb(27, 2, 2);
-    color: azure;
+    background: rgb(236, 234, 234);
+ 
+    color: rgb(1, 17, 17);
     display: inline;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.sidebar :left{
+    width: 300px;
+    height: 500px;
+    margin: 300px;
+    padding:200px;
+    
+}
 .algoname{
-    display: inline;
+    display: inline-block;
     border: 1px ;
 }
 #left{
@@ -128,13 +180,18 @@ button#sort:disabled{
     }
 }
 .slider {
+/* padding-top: 7px;
+  font-family: sans-serif;
+  font-weight: 700;
+  display: inline-block;*/
+
     -webkit-appearance: none;
       display: inline-block;
     appearance: none;
     width: 25%;
     height: 10px;
     border-radius: 30%;
-    background: #91a9ff;
+    background: #ce6118;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
@@ -153,9 +210,9 @@ button#sort:disabled{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #ffffff;
-    border: 2px solid #0238ff;
-    box-shadow: inset 0 0 2px #0238ff;
+    background: #0a0a0a;
+    border: 2px solid #aec71f;
+    box-shadow: inset 0 0 2px #3be009;
     cursor: pointer; /* Cursor on hover */
 }
 
@@ -172,7 +229,7 @@ button#sort:disabled{
     padding: 0 70px;
     margin: 0 200px;
     height: 310px;
-    width: 200px;
+    width: 600px;
 }
 
 .disabled{

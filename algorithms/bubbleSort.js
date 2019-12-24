@@ -1,5 +1,5 @@
 
-export async function bubbleSort(divArr, n, ms){
+ async function bubbleSort(divArr, n, ms){
     for(let i=0; i< n-1; i++){
         var c = false;
         // @ts-ignore
