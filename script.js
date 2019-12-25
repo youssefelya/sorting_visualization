@@ -175,6 +175,8 @@ async function sort() {
                 // @ts-ignore
                 const barOneStyle = arrayBars[barOneIdx].style;
                 barOneStyle.height = `${newHeight}px`;
+                // @ts-ignore
+                arrayBars[barOneIdx].innerText = newHeight;
             }
         }
 
