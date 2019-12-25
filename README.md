@@ -3,5 +3,5 @@ the motivation to put in the required efforts. Visuals are the best bet in such 
  engaging videos, 
 interesting info graphics, etc. help learners fight the boredom and motivate them to do better.
 This is first version of algorithm that I build, next step is going  to be building graph algorithm.
-You can access it here (use Google Chrome!):
+You can access :
 https://youssefelya.github.io/sorting_visualization/
