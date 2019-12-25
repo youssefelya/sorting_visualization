@@ -124,7 +124,7 @@ async function sort() {
 
         // setting algo-overview values
      //   setOverviewInfo("O(n<sup>2</sup>)", "In-Place", "Stable", "Internal", "Non-Recursive", "Yup!");
-     
+        setNote('Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.');
 
         // calling bubbleSortFunction
         // @ts-ignore
@@ -146,6 +146,7 @@ async function sort() {
 
         const animations = [];
         const realArray = [];
+        setNote('Merge sort is a divide-and-conquer algorithm, which recursively calls itself on halved portions of the initial collection.');
         for (const elm of document.getElementsByClassName('slide')) {
             // @ts-ignore
             realArray.push(parseInt(elm.style.height));
@@ -196,12 +197,12 @@ async function sort() {
         // @ts-ignore
         await qucikSort(divArr, 0, n - 1, ms);
     }else if(currentAlgo === 'radix'){
-        //### Nothing yet !!!!! 
-        setNote('Radix sort works by sorting each digit from least significant digit to most significant digit <br> Digits with same color (red) mean that they already right position');
 
+        setNote('Radix sort works by sorting each digit from least significant digit to most significant digit <br> Digits with same color (red) mean that they already right position');
        await radixSort(divArr, n, ms);
-       
-        
+
+       removeNote();
+            
     } 
     else {
         alert('how did you clicked that button');
@@ -212,6 +213,16 @@ async function sort() {
     await timer(1000);
     backToNormal(divArr, n);
 
+
+        // disabling all things
+     //   document.getElementById('sort').setAttribute("disabled", "disabled");
+     //   sliderInput.setAttribute("disabled", "disabled");
+       newArrayBtn.setAttribute("disabled", "disabled");
+       sliderInput.className = 'slider disabled';
+       // @ts-ignore
+       sliderInput.parentNode.className = 'disabled';
+       newArrayBtn.className = 'disabled';
+
     // enabling all things 
     document.getElementById("sort").removeAttribute("disabled");
     sliderInput.removeAttribute("disabled");
@@ -219,15 +230,15 @@ async function sort() {
     sliderInput.className = 'slider';
     // @ts-ignore
     sliderInput.parentNode.className = '';
-  //  newArrayBtn.className = '';
+     newArrayBtn.className = 'btn btn-outline-primary';
 
     // hiding selected sort Info and overview info
 
    // document.getElementById(currentAlgo + "Info").style.display = "none";
     // @ts-ignore
-   // document.getElementsByClassName('algo-overview')[0].style.display = "none";
+     document.getElementsByClassName('algo-overview')[0].style.display = "none";
     // remove overview Info
- //   removeOverviewInfo();
+   // removeOverviewInfo();
 
     removeNote();
 
